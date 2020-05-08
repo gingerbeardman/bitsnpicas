@@ -11,6 +11,7 @@ import com.kreative.bitsnpicas.exporter.HMZKBitmapFontExporter;
 import com.kreative.bitsnpicas.exporter.HexBitmapFontExporter;
 import com.kreative.bitsnpicas.exporter.KBnPBitmapFontExporter;
 import com.kreative.bitsnpicas.exporter.NFNTBitmapFontExporter;
+import com.kreative.bitsnpicas.exporter.PlaydateBitmapFontExporter;
 import com.kreative.bitsnpicas.exporter.RFontBitmapFontExporter;
 import com.kreative.bitsnpicas.exporter.SBFBitmapFontExporter;
 import com.kreative.bitsnpicas.exporter.SFontBitmapFontExporter;
@@ -70,6 +71,11 @@ public enum BitmapOutputFormat {
 	RFONT(".png", "rfont") {
 		public BitmapFontExporter createExporter(BitmapOutputOptions o) {
 			return new RFontBitmapFontExporter();
+		}
+	},
+	PLAYDATE(".png", "png", "playdate") {
+		public BitmapFontExporter createExporter(BitmapOutputOptions o) {
+			return new PlaydateBitmapFontExporter();
 		}
 	},
 	HEX(".hex", "hex") {
